@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# PyInstaller
+build/
+dist/
+*.spec.bak
+
+# User data (рядом с .exe в рантайме)
+app.log
+stats.jsonl
+user_settings.json
+shop_grid_fail_*.png
+
+# User-specific bait template (у каждого свой)
+templates/bait_target.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store

@@ -1,0 +1,129 @@
+"""Дефолты. Координаты под 1920x1080."""
+
+import ctypes
+
+# DPI awareness — без этого клики/скриншоты ломаются при scaling > 100%.
+try:
+    ctypes.windll.shcore.SetProcessDpiAwareness(2)
+except Exception:
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+    except Exception:
+        pass
+
+SCREEN_W = 1920
+SCREEN_H = 1080
+
+ROI_BAR = {"left": 593, "top": 41, "width": 747, "height": 61}
+
+HSV_YELLOW = {
+    "lower": (18, 120, 150),
+    "upper": (35, 255, 255),
+}
+
+HSV_GREEN = {
+    "lower": (78, 150, 150),
+    "upper": (92, 255, 255),
+    "min_pixels": 100,
+}
+
+TICK_INTERVAL = 0.03
+CAST_DELAY = 0.6
+MIN_BITE_WAIT = 3.5
+POST_CATCH_COOLDOWN = 3.0
+HOOK_DELAY = 0.4
+CATCH_CLOSE_DELAY = 1.2
+MINIGAME_END_GRACE = 1.5
+MINIGAME_APPEAR_TIMEOUT = 5.0
+
+STRIKE_MAX_ATTEMPTS = 5
+STRIKE_INTERVAL = 1.5
+
+HOLD_TRIGGER_PX = 16
+RELEASE_BIAS_PX = 7
+
+KEY_HOLD = 0.04
+
+WATCHDOG_TIMEOUT = {
+    "IDLE": 60,
+    "WAITING_BITE": 45,
+    "MINIGAME": 75,
+    "CAUGHT": 12,
+    "BREAK": 9999,
+    "SELLING": 30,
+    "BUYING_BAIT": 45,
+}
+
+SELL_TAB_STORAGE   = (149, 414)
+SELL_QUICK_BUTTON  = (1063, 964)
+SELL_CONFIRM       = (1166, 706)
+
+SELL_OPEN_DELAY    = 1.5
+SELL_TAB_DELAY     = 2.0
+SELL_BUTTON_DELAY  = 2.0
+SELL_CONFIRM_DELAY = 2.2
+SELL_CLOSE_DELAY   = 1.5
+
+BUY_BAIT_PLUS        = (1775, 954)
+BUY_BAIT_CONFIRM     = (1607, 1032)
+BUY_PURCHASE_CONFIRM = (1166, 706)
+
+BUY_BAIT_COUNT = 20
+
+# Игра показывает окно подтверждения от 50 шт.
+BUY_CONFIRM_THRESHOLD = 50
+
+BUY_OPEN_DELAY     = 1.5
+BUY_SELECT_DELAY   = 0.6
+BUY_PLUS_INTERVAL  = 0.1
+BUY_PURCHASE_DELAY = 0.8
+BUY_CLOSE_DELAY    = 1.0
+
+SHOP_GRID_ROI = {"left": 37, "top": 151, "width": 640, "height": 695}
+SHOP_GRID_COLS = 3
+SHOP_GRID_ROWS = 3
+
+BAIT_MATCH_THRESHOLD = 0.70
+
+BAIT_TEMPLATE_PATH = "templates/bait_target.png"
+
+BAIT_SELECT_CONFIRM = (1157, 712)
+
+BAIT_SELECT_OPEN_DELAY    = 1.0
+BAIT_SELECT_CONFIRM_DELAY = 1.2
+
+CATCH_CLICK = (761, 292)
+
+HUMANIZE = True
+JITTER_PCT = 0.20
+
+HUMAN_REACTION_MIN = 0.25
+HUMAN_REACTION_MAX = 0.55
+
+CLICK_JITTER_RADIUS = 60
+
+INTER_CYCLE_PAUSE_MIN = 1.0
+INTER_CYCLE_PAUSE_MAX = 3.5
+
+LONG_PAUSE_PROBABILITY = 0.05
+LONG_PAUSE_MIN = 5.0
+LONG_PAUSE_MAX = 18.0
+
+MISS_PROBABILITY = 0.00
+
+SESSION_MAX_MIN = 45
+BREAK_MIN_MIN = 3
+BREAK_MAX_MIN = 15
+
+AUTO_SELL_ENABLED = True
+AUTO_BUY_ENABLED = True
+
+INITIAL_BAIT_BUDGET = 20
+
+HOTKEY_TOGGLE = "f9"
+HOTKEY_QUIT = "f12"
+HOTKEY_DEBUG = "f8"
+HOTKEY_SELL = "f7"
+HOTKEY_BUY_BAIT = "f6"
+HOTKEY_TOGGLE_AUTO_SELL = "f3"
+HOTKEY_TOGGLE_AUTO_BUY = "f4"
